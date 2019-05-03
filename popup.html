@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Codystar|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="sha.js"></script>
+    <script src="popup.js"></script>
+    <script src="jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>WAXAuth</title>
+  </head>
+  <body>
+
+      <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>Settings</h2>
+      </div>
+        <center><p>Account Settings</p>
+          <div class="container">
+            <span>ADD A PROFILE</span>
+            <div>
+              <div class="row">
+                <input class="details2" type="text" name="user" placeholder="Username" id="username">
+              </div>
+              <div class="row">
+                <input class="details2" type="text" name="key" placeholder="Secret key" id="userkey">
+                <a class="icon-wrap" title="Tutorial to get your secret." id="tutorial" href="https://imgur.com/a/C7MCttN">
+                  <i class="fa fa-question"></i>
+                </a>
+              </div>
+              <div class="row">
+                <input id="adduser" class="add" type="button" name="add" value="ADD +">
+              </div>
+              <p id="errorMsg">
+                Error
+              </p>
+              <label class="streamer" title="Will replace your code with X. Fill/Copy button still works.">
+                  <input class="auto-checkbox" type="checkbox" id="streamer" value="false"><a><i class="fa fa-twitch"></i>STREAMER MODE</a></input>
+                  <span class="checkmark"></span>
+            </label>
+                <label class="autofill" title="AUTOFILL On trade.opskins.com & opskins.com">
+                    <input class="auto-checkbox" type="checkbox" id="autofill" value="false"><a><i class="fa fa-lock"></i>Autofill</a></input>
+                    <span class="checkmark" id="autofillcheck"></span>
+              </label>
+            </div>
+          </div>
+        <input id="save" class="add" type="button" name="save" value="SAVE">
+      </center>
+      </div>
+      <!-- End of Modal -->
+
+
+    </div>
+    <div class="header">
+        <a class="fa fa-cog" id="settings"></a>
+    </div>
+    <div class="logo-wrap">
+      <div class="logo-row">
+        <img src="waxauth.png" class="logo">
+      </div>
+    </div>
+    <div class="container">
+        <span>SELECT A PROFILE</span>
+        <div class="row">
+            <select id="chooseProfile" class="details"></select>
+            <input id="deluser" class="delete" type="button" name="del" value="REMOVE" title="Delete your user for good. Make sure you have a backup of ur key or disabled 2FA">
+        </div>
+      </div>
+    <div id="countdown">
+      <div id="code">
+        <div id="user">
+          <div class="user-wrap">
+            <h2 id="totpa">---</h2>
+            <p id="activename"></p>
+          </div>
+          <i class="fa fa-clone" id="copycode"></i>
+        </div>
+      </div>
+        <div id="code">
+            <div id="add-user">
+              <p id="">Add a user +</p>
+            </div>
+          </div>
+    </div>
+    <footer>
+      <div id="myProgress">
+        <input id="injection" class="inject" style="z-index:101" type="button" name="inj" value="FILL">
+        <a class="icon-wrap-foot" title="Fill in on Opskins">
+            <i class="fa fa-question"></i>
+        </a>
+        <div id="myBar"></div>
+      </div>
+    </footer>
+  </body>
+
+
+</html>
