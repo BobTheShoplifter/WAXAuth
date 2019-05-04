@@ -1,4 +1,4 @@
-window.otp=0;
+window.otp="";
 window.enabled=false;
 
 
@@ -92,28 +92,29 @@ setInterval(injectCode, 1000);
 
 function injectCode() {
   getsettings();
+  var otp = window.otp;
   if (window.enabled == false) return;
   chrome.storage.local.get({'requireis': []}, function (result) {
       var requireis = result.requireis;
       for(var i = 0; i < requireis.length; i++){
             OTP(requireis[i].key);
             if($(".two-factor-input").length){
-            $(".two-factor-input").val(012345);
+            $(".two-factor-input").val(otp);
             }
             if($(".twofactor-input").length){
-              $(".twofactor-input").val(window.otp);
+              $(".twofactor-input").val(otp);
               }
             if($(".twofactor-entry-code-input").length){
-              $(".twofactor-entry-code-input").val(window.otp);
+              $(".twofactor-entry-code-input").val(otp);
               }
               if($("#twoFactorCode").length){
-                $("#twoFactorCode").val(window.otp);
+                $("#twoFactorCode").val(otp);
                 }
               if($("#twoFactorCodeETHCashout").length){
-                  $("#twoFactorCodeETHCashout").val(window.otp);
+                  $("#twoFactorCodeETHCashout").val(otp);
                   }
                   if($("#twoFactorCodeBTCCashout").length){
-                      $("#twoFactorCodeBTCCashout").val(window.otp);
+                      $("#twoFactorCodeBTCCashout").val(otp);
                       }
             //$(".twofactor-entry-code-input").val(window.otp);
             //    document.querySelector("two-factor-input").value = 123
