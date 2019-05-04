@@ -5,7 +5,7 @@ window.enabled=false;
 function getsettings() {
       chrome.storage.local.get('settings', function (result) {
           var settings = result.settings;
-          if (settings.autoFill != undefined) {
+          if (settings != undefined) {
           window.enabled = settings.autoFill == true ? true : false;
         }
       })   

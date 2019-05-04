@@ -9,7 +9,7 @@
     }
   ],
   "description": "WAXAuth - The easiest way to use 2FA on the WAX and Opskins platform.",
-  "version": "1.0",
+  "version": "1.1",
   "browser_action": {
     "default_icon": {
       "48": "img/icon48.png",

@@ -215,7 +215,6 @@ function selectChange() {
 
 function injectCode() {
   let otp = window.currentcode;
-  console.log(otp)
   chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
     var id = tabs.id;
     //Checking Tabs
