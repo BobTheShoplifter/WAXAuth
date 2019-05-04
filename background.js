@@ -6,9 +6,13 @@
         chrome.storage.local.get('settings', function (result) {
             var settings = result.settings;
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (settings.autoFill != undefined) {
             window.enabled = settings.autoFill == true ? true : false;
           }
+=======
+            window.enabled = settings.autoFill == true ? true : false;
+>>>>>>> parent of 0a090c3... Fix string
 =======
             window.enabled = settings.autoFill == true ? true : false;
 >>>>>>> parent of 0a090c3... Fix string
@@ -103,7 +107,11 @@
               OTP(requireis[i].key);
               if($(".two-factor-input").length){
 <<<<<<< HEAD
+<<<<<<< HEAD
               $(".two-factor-input").val(012345);
+=======
+              $(".two-factor-input").val(window.otp);
+>>>>>>> parent of 0a090c3... Fix string
 =======
               $(".two-factor-input").val(window.otp);
 >>>>>>> parent of 0a090c3... Fix string
