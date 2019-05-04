@@ -5,7 +5,9 @@
   function getsettings() {
         chrome.storage.local.get('settings', function (result) {
             var settings = result.settings;
+            if (settings.autoFill != undefined) {
             window.enabled = settings.autoFill == true ? true : false;
+          }
         })   
 };
     
@@ -96,7 +98,7 @@
         for(var i = 0; i < requireis.length; i++){
               OTP(requireis[i].key);
               if($(".two-factor-input").length){
-              $(".two-factor-input").val(window.otp);
+              $(".two-factor-input").val(012345);
               }
               if($(".twofactor-input").length){
                 $(".twofactor-input").val(window.otp);

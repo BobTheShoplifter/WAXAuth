@@ -4,7 +4,7 @@ var settings = {
 };
 window.loadedatofill = false;
 window.streamermode=false;
-window.currentcode=0;
+window.currentcode="";
 
 
 
@@ -214,30 +214,31 @@ function selectChange() {
 
 
 function injectCode() {
-  var otp = window.currentcode;
+  let otp = window.currentcode;
+  console.log(otp)
   chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
     var id = tabs.id;
     //Checking Tabs
     chrome.tabs.executeScript(id, {
-        code: 'var elementExists = document.querySelector(".two-factor-input"); if (elementExists != null) {elementExists.value = ' + otp + ';}'
+        code: 'var elementExists = document.querySelector(".two-factor-input"); if (elementExists != null) {elementExists.value = \'' + otp + '\';}'
     });
       chrome.tabs.executeScript(id, {
-      code: 'var elementExists = document.querySelector(".twofactor-input"); if (elementExists != null) {elementExists.value = ' + otp + ';}'
+      code: 'var elementExists = document.querySelector(".twofactor-input"); if (elementExists != null) {elementExists.value = \'' + otp + '\';}'
   });
   chrome.tabs.executeScript(id, {
-    code: 'var elementExists = document.querySelector(".onsite-txt-offer"); if (elementExists != null) {elementExists.value = ' + otp + ';}'
+    code: 'var elementExists = document.querySelector(".onsite-txt-offer"); if (elementExists != null) {elementExists.value = \'' + otp + '\';}'
 });
   chrome.tabs.executeScript(id, {
-    code: 'var elementExists = document.getElementById("twoFactorCodeETHCashout"); if (elementExists != null) {elementExists.value = ' + otp + ';}' 
+    code: 'var elementExists = document.getElementById("twoFactorCodeETHCashout"); if (elementExists != null) {elementExists.value = \'' + otp + '\';}' 
 });
 chrome.tabs.executeScript(id, {
-  code: 'var elementExists = document.getElementById("twoFactorCodeBTCCashout"); if (elementExists != null) {elementExists.value = ' + otp + ';}' 
+  code: 'var elementExists = document.getElementById("twoFactorCodeBTCCashout"); if (elementExists != null) {elementExists.value = \'' + otp + '\';}' 
 });
 chrome.tabs.executeScript(id, {
-  code: 'var elementExists = document.getElementById("twoFactorCode"); if (elementExists != null) {elementExists.value = ' + otp + ';}' 
+  code: 'var elementExists = document.getElementById("twoFactorCode"); if (elementExists != null) {elementExists.value = \'' + otp + '\';}' 
 });
     chrome.tabs.executeScript(id, {
-      code: 'var elementExists = document.querySelector(".twofactor-entry-code-input"); if (elementExists != null) {elementExists.value = ' + otp + ';}'
+      code: 'var elementExists = document.querySelector(".twofactor-entry-code-input"); if (elementExists != null) {elementExists.value = \'' + otp + '\';}'
   });
   });
 }
