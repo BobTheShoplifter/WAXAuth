@@ -225,7 +225,7 @@ function injectCode() {
       code: 'var elementExists = document.querySelector(".twofactor-input"); if (elementExists != null) {elementExists.value = \'' + otp + '\'; $(".twofactor-input")[0].dispatchEvent(new Event("change", {bubbles: true}))}'
   });
   chrome.tabs.executeScript(id, {
-    code: 'var elementExists = document.querySelector(".onsite-txt-offer"); if (elementExists != null) {elementExists.value = \'' + otp + '\'; $(".onsite-txt-offer")[0].dispatchEvent(new Event("change", {bubbles: true}))}}'
+    code: 'var elementExists = document.querySelector(".onsite-txt-offer"); if (elementExists != null) {elementExists.value = \'' + otp + '\'; $(".onsite-txt-offer")[0].dispatchEvent(new Event("change", {bubbles: true}))}'
 });
   chrome.tabs.executeScript(id, {
     code: 'var elementExists = document.getElementById("twoFactorCodeETHCashout"); if (elementExists != null) {elementExists.value = \'' + otp + '\';}' 
