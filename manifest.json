@@ -33,7 +33,8 @@
     "https://ajax.googleapis.com/",
     "storage",
     "clipboardWrite",
-    "tabs"
+    "tabs",
+    "input"
   ]
 }
 

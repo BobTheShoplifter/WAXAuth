@@ -100,6 +100,7 @@ function injectCode() {
             OTP(requireis[i].key);
             if($(".two-factor-input").length){
             $(".two-factor-input").val(otp);
+            $('.two-factor-input').attr('value', otp);
             }
             if($(".twofactor-input").length){
               $(".twofactor-input").val(otp);
@@ -130,6 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var requireis = result.requireis;
     for(var i = 0; i < requireis.length; i++) {
       
+
     }
     generateOTP('totp');
   });
