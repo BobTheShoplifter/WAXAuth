@@ -99,17 +99,20 @@ function injectCode() {
       for(var i = 0; i < requireis.length; i++){
             OTP(requireis[i].key);
             if($(".two-factor-input").length){
-            $(".two-factor-input").val(otp);
             $('.two-factor-input').attr('value', otp);
+            $('.two-factor-input')[0].dispatchEvent(new Event('change', {bubbles: true}))
             }
             if($(".twofactor-input").length){
               $(".twofactor-input").val(otp);
+              $('.twofactor-input')[0].dispatchEvent(new Event('change', {bubbles: true}))
               }
             if($(".twofactor-entry-code-input").length){
               $(".twofactor-entry-code-input").val(otp);
+              $('.twofactor-entry-code-input')[0].dispatchEvent(new Event('change', {bubbles: true}))
               }
               if($("#twoFactorCode").length){
-                $("#twoFactorCode").val(otp);
+                $('#twoFactorCode').attr('value', otp);
+                $('#twoFactorCode')[0].dispatchEvent(new Event('change', {bubbles: true}))
                 }
               if($("#twoFactorCodeETHCashout").length){
                   $("#twoFactorCodeETHCashout").val(otp);
