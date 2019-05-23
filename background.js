@@ -119,7 +119,7 @@ function injectCode() {
                   }
                   if($("#twoFactorCodeBTCCashout").length){
                       $("#twoFactorCodeBTCCashout").val(otp);
-                      }
+                      }   
             //$(".twofactor-entry-code-input").val(window.otp);
             //    document.querySelector("two-factor-input").value = 123
             //document.querySelector("two-factor-input").value = window.otp;
@@ -133,8 +133,6 @@ document.addEventListener('DOMContentLoaded', function() {
   chrome.storage.local.get({'requireis': []}, function (result) {
     var requireis = result.requireis;
     for(var i = 0; i < requireis.length; i++) {
-      
-
     }
     generateOTP('totp');
   });

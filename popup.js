@@ -236,6 +236,9 @@ chrome.tabs.executeScript(id, {
 chrome.tabs.executeScript(id, {
   code: 'var elementExists = document.getElementById("twoFactorCode"); if (elementExists != null) {elementExists.value = \'' + otp + '\'; $("#twoFactorCode")[0].dispatchEvent(new Event("change", {bubbles: true}))};' 
 });
+chrome.tabs.executeScript(id, {
+  code: 'var elementExists = document.getElementById("code"); if (elementExists != null) {elementExists.value = \'' + otp + '\'; $("#code")[0].dispatchEvent(new Event("change", {bubbles: true}))};' 
+});
     chrome.tabs.executeScript(id, {
       code: 'var elementExists = document.querySelector(".twofactor-entry-code-input"); if (elementExists != null) {elementExists.value = \'' + otp + '\'; $(".twofactor-entry-code-input")[0].dispatchEvent(new Event("change", {bubbles: true}))}'
   });
