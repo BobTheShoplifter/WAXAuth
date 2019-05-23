@@ -5,7 +5,7 @@
   "content_scripts": [
     {
       "matches": ["https://*.opskins.com/*"],
-      "js": ["background.js", "sha.js", "jquery.min.js"]
+      "js": ["background.js", "sha.js", "jquery.min.3.4.1.js"]
     }
   ],
   "description": "WAXAuth - The easiest way to use 2FA on the WAX and Opskins platform.",
